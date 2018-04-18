@@ -1,4 +1,4 @@
-# Sticky REST API Server
+# final-project-developersera_4
 
 Follow below steps in order to start the application.
 
