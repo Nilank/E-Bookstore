@@ -25,10 +25,10 @@ let productSchema = new Schema({
         type: Number,
     },
     itemList: {
-        size: {
-            s: Number,
-            m: Number,
-            l: Number,
+        style: {
+            HardBind: Number,
+            SoftCopy: Number,
+             kindle: Number,
             xl: Number
         },
         color: [{
@@ -36,9 +36,9 @@ let productSchema = new Schema({
             name: String
         }],
         price: {
-            s: Number,
-            m: Number,
-            l: Number,
+    HardBind: Number,
+    SoftCopy: Number,
+    kindle: Number,
             xl: Number
         }
     }
