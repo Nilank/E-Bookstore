@@ -1,5 +1,11 @@
 # FinalProject by DevelopersEra
 
+Team Members
+1.) Deepak Chandwani
+2.) Harsh Shinde
+3.) Nilank Sharma
+4.) Shantanu Deosthale
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 Various web technologies tools such as REST API, MongoDB Express, Node.js is used for this project.
 
