@@ -7,7 +7,7 @@ let Prod = require('./product');
 
 let orderSchema = new Schema({
     productList: [{
-        size: String,
+        style: String,
         qty: Number,
         productId: {
             type: Schema.Types.ObjectId,
@@ -50,35 +50,5 @@ let orderSchema = new Schema({
 });
 
 orderSchema.plugin(mongooseUniqueValidator);
-
-// orderSchema.post('put', function (order) {
-//     Prod.find({}, function (err, products) {
-//         products.forEach(function (product) {
-//             order.productList.forEach(function (p) {
-//                 if (p.product._id === product._id) {
-//                     switch (p.size.toLowerCase()) {
-//                         case 's':
-//                             product.itemList.size.s = product.itemList.size.s - p.qty;
-//                             product.save();
-//                             break;
-//                         case 'm':
-//                             product.itemList.size.m = product.itemList.size.m - p.qty;
-//                             product.save();
-//                             break;
-//                         case 'l':
-//                             product.itemList.size.l = product.itemList.size.l - p.qty;
-//                             product.save();
-//                             break;
-//                         case 'xl':
-//                             product.itemList.size.xl = product.itemList.size.xl - p.qty;
-//                             product.save();
-//                             break;
-//                     }
-//                 }
-//             });
-//         });
-//     });
-// });
-
 
 module.exports = mongoose.model('Order', orderSchema);
