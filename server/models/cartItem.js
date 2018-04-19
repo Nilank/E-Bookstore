@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let cartItemSchema = new Schema({
-    size: String,
+    style: String,
     qty: Number,
     productId: {
         type: Schema.Types.ObjectId,

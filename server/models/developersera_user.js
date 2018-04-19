@@ -27,7 +27,7 @@ let userSchema = new Schema({
         sparse: true
     }],
     cart: [{
-        size: String,
+        style: String,
         qty: Number,
         productId: {
             type: Schema.Types.ObjectId,
