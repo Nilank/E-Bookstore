@@ -1,13 +1,12 @@
 {
   "name": "server",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "server connection",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./bin/www"
   },
   "author": "developersera",
-  "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
     "async": "^2.6.0",
