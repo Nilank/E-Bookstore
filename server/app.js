@@ -12,7 +12,7 @@ let mongoose = require('mongoose'),
 // Mongoose parameters
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/giftedDB', {useMongoClient: true});
+mongoose.connect('mongodb://localhost:27017/ourBookStore', {useMongoClient: true});
 
 // Initialize Models
 

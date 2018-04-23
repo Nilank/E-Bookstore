@@ -1,0 +1,83 @@
+<header class="sticky-top">
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation"
+                (click)="onClickBtn()">
+          <div [class.change]="btnAnimation">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+          </div>
+        </button>
+        <a [routerLink]="['']"><img class="navbar-brand smallscreen-brand" src="../../assets/images/brand-logo.jpg"
+                                    alt="Shop4All"></a>
+        <div class="small-navbar-right">
+          <a><img src="../../assets/images/icon-search.svg" height="15px" width="15px" (click)="showSearchBar()"></a>
+          <a [routerLink]="['cart']" ><img src="../../assets/images/icon-bag-m.svg"><span class="text-secondary">(<span
+            class="cart-count">0</span>)</span></a>
+        </div>
+        <div class="navbar-collapse collapse" id="mainNavbar" #mainNavBar>
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item mr-md-3">
+              <a class="nav-link text-uppercase text-center text-md-left" [routerLink]="['']">Home</a>
+            </li>
+
+
+            <li class="nav-item dropdown mr-md-3 ml-md-2">
+              <a class="nav-link text-uppercase text-center text-md-left" href="#" id="dropdown-shop"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATEGORY <span
+                class="sr-only">(current)</span></a>
+              <div class="dropdown-menu" aria-labelledby="dropdown-shop">
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['products','action']">Action and Adventure</a>
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['products','romance']">Romance</a>
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['products','cookbooks']">Cookbooks</a>
+              </div>
+            </li>
+            <li class="nav-item mr-md-3">
+              <a class="nav-link text-uppercase text-center text-md-left" [routerLink]="['','newarrivals']">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-center text-md-left"  [routerLink]="['','bestsellers']">Best Sellers</a>
+            </li>
+          </ul>
+          <div class="navbar-right">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link text-uppercase text-center text-md-left"
+                   id="dropdown-user"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span>{{ this.userName }}</span>
+                  <img class="hide-sm-img" src="../../assets/images/icon-account.svg">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdown-user">
+                  <a class="dropdown-item text-secondary text-uppercase" *ngIf="isLoggedIn()" [routerLink]="['account/orders']">My Orders</a>
+                  <a class="dropdown-item text-secondary text-uppercase" *ngIf="!isLoggedIn()" [routerLink]="['account/login']">Login</a>
+                  <a class="dropdown-item text-secondary text-uppercase" *ngIf="isLoggedIn()" (click)="onLogout()">Logout</a>
+                </div>
+              </li>
+              <li class="nav-item" (click)="showSearchBar()"><a class="nav-link text-uppercase hide-sm-link"><span>SEARCH</span><img
+                src="../../assets/images/icon-search.svg"></a></li>
+              <li class="nav-item"><a [routerLink]="['cart']" class="nav-link text-uppercase hide-sm-link"><span>CART</span><img src="../../assets/images/icon-bag.svg" alt=""></a></li>
+            </ul>
+          </div><!-- navbar-right -->
+        </div><!-- mainNavbar -->
+      </nav>
+      <div class="search-navbar col-12" #searchBar
+           *ngIf="searchBarVisible">
+        <form class="form-inline my-2 my-lg-0 col-12">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" (focus)="changeBorder()"
+                 (focusout)="changeBorder()" [ngStyle]="borderBottomStyle()" [(ngModel)]="searchResult" [ngModelOptions]="{standalone: true}">
+          <a [routerLink]="['search']"  [queryParams]='{name:searchResult}'>
+            <button class="navbar-form-button" type="submit" #searchBarBtn  [ngStyle]="borderBottomStyle()"><i
+              class="fa fa-search text-secondary" aria-hidden="true"></i></button></a>
+        </form>
+      </div>
+    </div><!-- row -->
+
+  </div><!-- container-fluid -->
+  <!--</div>-->
+</header>
+

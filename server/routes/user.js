@@ -4,7 +4,7 @@ const bCrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const Order = require('../models/user_order');
-const User = require('../models/developsers_user');
+const User = require('../models/developersera_user');
 const Cart = require('../models/cartItem');
 
 router.post('/', function (req, res, next) {
