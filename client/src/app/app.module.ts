@@ -17,6 +17,7 @@ import { DetailComponent } from './detail/detail.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout-component/checkout.component';
 import { PaymentComponent } from './payment/payment.component';
+import { FilterComponent } from './filter/filter.component';
 
 
 
@@ -35,7 +36,8 @@ import { PaymentComponent } from './payment/payment.component';
     DetailComponent,
     CartComponent,
     CheckoutComponent,
-    PaymentComponent
+    PaymentComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
