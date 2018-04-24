@@ -15,6 +15,8 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import {AuthService} from "./services/auth.service";
 import { ItemComponentComponent } from './item-component/item-component.component';
 import { DetailComponent } from './detail/detail.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout-component/checkout.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { DetailComponent } from './detail/detail.component';
     HomeComponentComponent,
     LoginComponentComponent,
     ItemComponentComponent,
-    DetailComponent
+    DetailComponent,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule
