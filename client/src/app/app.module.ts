@@ -18,6 +18,7 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout-component/checkout.component';
 import { PaymentComponent } from './payment/payment.component';
 import { FilterComponent } from './filter/filter.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -37,7 +38,8 @@ import { FilterComponent } from './filter/filter.component';
     CartComponent,
     CheckoutComponent,
     PaymentComponent,
-    FilterComponent
+    FilterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
