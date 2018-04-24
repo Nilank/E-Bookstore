@@ -12,6 +12,8 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { OrderService } from './services/order.service';
 import { SharedService } from './services/shared.service';
 import { LoginComponentComponent } from './login-component/login-component.component';
+import {AuthService} from "./services/auth.service";
+import { ItemComponentComponent } from './item-component/item-component.component';
 
 
 @NgModule({
@@ -21,12 +23,13 @@ import { LoginComponentComponent } from './login-component/login-component.compo
     FooterComponent,
     HeaderComponent,
     HomeComponentComponent,
-    LoginComponentComponent
+    LoginComponentComponent,
+    ItemComponentComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [ProductService, UserAccountService, OrderService,SharedService],
+  providers: [ProductService, UserAccountService, OrderService, SharedService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
