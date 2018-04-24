@@ -16,6 +16,7 @@ import { ItemComponentComponent } from './item-component/item-component.componen
 import { DetailComponent } from './detail/detail.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout-component/checkout.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 
@@ -33,7 +34,8 @@ import { CheckoutComponent } from './checkout-component/checkout.component';
 
     DetailComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
