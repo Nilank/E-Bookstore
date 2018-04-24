@@ -1,40 +1,48 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { UserAccountService } from './services/userAccount.service';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { ProductService } from './services/product.service';
 import { AppComponent } from './app.component';
-import { ParentComponent } from './parent/parent.component';
-import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { HomeComponentComponent } from './home-component/home-component.component';
-import { OrderService } from './services/order.service';
-import { SharedService } from './services/shared.service';
+import { FooterComponent } from './footer/footer.component';
+import { CartComponent } from './cart/cart.component';
+import { DetailComponent } from './detail/detail.component';
+import { ViewOrderComponent } from './view-order/view-order.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
-import {AuthService} from "./services/auth.service";
+import { HomeComponentComponent } from './home-component/home-component.component';
 import { ItemComponentComponent } from './item-component/item-component.component';
 import { DetailComponent } from './detail/detail.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout-component/checkout.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    ParentComponent,
-    FooterComponent,
     HeaderComponent,
-    HomeComponentComponent,
+    FooterComponent,
+    CartComponent,
+    DetailComponent,
+    ViewOrderComponent,
     LoginComponentComponent,
+    HomeComponentComponent,
     ItemComponentComponent,
+
     DetailComponent,
     CartComponent,
     CheckoutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
+
 
   providers: [ProductService, UserAccountService, OrderService, SharedService, AuthService],
   bootstrap: [AppComponent]
