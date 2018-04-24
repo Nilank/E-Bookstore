@@ -1,0 +1,38 @@
+<div class="order">
+  <p>Hello,
+    <b>{{userAccountService.user.firstName}} {{userAccountService.user.lastName}}</b>
+  </p>
+  <p>From your account dashboard you can view your recent orders.</p>
+
+  <h4>Order History</h4>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-condensed">
+        <thead>
+        <tr>
+          <td>
+            <strong>Order Number</strong>
+          </td>
+          <td class="text-center">
+            <strong>Order Date</strong>
+          </td>
+          <td class="text-center">
+            <strong>View</strong>
+          </td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let order of orderList;let i = index">
+          <td>{{this.userAccountService.user.orderList[i].substring(0,6)}}</td>
+          <td class="text-center">{{order.orderDate | date: "M/d/y HH:mm"}}</td>
+          <td class="text-center">
+            <a [routerLink]="['..', this.userAccountService.user.orderList[i]]">
+              <button type="submit" class="btn btn-success">view</button>
+            </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
