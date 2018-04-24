@@ -13,17 +13,12 @@ import { ViewOrderComponent } from './view-order/view-order.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { ItemComponentComponent } from './item-component/item-component.component';
-import { OrdersComponentComponent } from './orders-component/orders-component.component';
-import { CheckoutComponentComponent } from './checkout-component/checkout-component.component';
-import { FilterComponent } from './filter/filter.component';
+import { DetailComponent } from './detail/detail.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout-component/checkout.component';
 import { PaymentComponent } from './payment/payment.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UserAccountService } from './services/userAccount.service';
-import { AuthService } from './services/auth.service';
-import { SharedService } from './services/shared.service';
-import { OrderService } from './services/order.service';
-import { DatePipe } from '@angular/common';
+import { FilterComponent } from './filter/filter.component';
+
 
 
 @NgModule({
@@ -37,13 +32,13 @@ import { DatePipe } from '@angular/common';
     LoginComponentComponent,
     HomeComponentComponent,
     ItemComponentComponent,
-    OrdersComponentComponent,
-    CheckoutComponentComponent,
-    FilterComponent,
-    PaymentComponent,
-    PageNotFoundComponent
-  ],
 
+    DetailComponent,
+    CartComponent,
+    CheckoutComponent,
+    PaymentComponent,
+    FilterComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -51,8 +46,9 @@ import { DatePipe } from '@angular/common';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DatePipe, ProductService, UserAccountService, AuthService, SharedService, OrderService],
+
+
+  providers: [ProductService, UserAccountService, OrderService, SharedService, AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
