@@ -14,6 +14,7 @@ import { SharedService } from './services/shared.service';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import {AuthService} from "./services/auth.service";
 import { ItemComponentComponent } from './item-component/item-component.component';
+import { DetailComponent } from './detail/detail.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ItemComponentComponent } from './item-component/item-component.componen
     HeaderComponent,
     HomeComponentComponent,
     LoginComponentComponent,
-    ItemComponentComponent
+    ItemComponentComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule
