@@ -24,7 +24,7 @@ import { SharedService } from './services/shared.service';
   imports: [
     BrowserModule
   ],
-  providers: [ProductService, UserAccountService, OrderService,SharedService],
+  providers: [ProductService, UserAccountService, OrderService,SharedService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
