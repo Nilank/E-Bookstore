@@ -28,8 +28,7 @@ let productSchema = new Schema({
         style: {
             HardBind: Number,
             SoftCopy: Number,
-             kindle: Number,
-            xl: Number
+             kindle: Number
         },
         color: [{
             url: String,
@@ -38,8 +37,7 @@ let productSchema = new Schema({
         price: {
     HardBind: Number,
     SoftCopy: Number,
-    kindle: Number,
-            xl: Number
+    kindle: Number
         }
     }
 });
