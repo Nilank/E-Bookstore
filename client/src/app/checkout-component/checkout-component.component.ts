@@ -4,7 +4,6 @@ import {ListOfProducts, Order} from '../models/order';
 import {UserAccountService} from '../services/userAccount.service';
 import {Router} from '@angular/router';
 import {OrderService} from '../services/order.service';
-
 @Component({
   selector: 'app-checkout-component',
   templateUrl: './checkout-component.component.html',
@@ -13,7 +12,6 @@ import {OrderService} from '../services/order.service';
 export class CheckoutComponentComponent implements OnInit {
   myForm: FormGroup;
   productList: Array<ListOfProducts>;
-
   onSubmit() {
     this.uas.getCurrentUser();
     this.productList = this.uas.cart;
@@ -24,19 +22,20 @@ export class CheckoutComponentComponent implements OnInit {
       date,
       this.uas.userId,
       this.myForm.value.firstName + ' ' + this.myForm.value.lastName,
+      this.myForm.value.phone,
+      this.myForm.value.city,
       this.myForm.value.state,
       this.myForm.value.zip,
       this.myForm.value.address1,
       this.myForm.value.address2
     );
+
     this.orderService.order = order;
     this.router.navigateByUrl('/payment');
     this.myForm.reset();
   }
-
   constructor(private uas: UserAccountService, private router: Router, private orderService: OrderService) {
   }
-
   ngOnInit() {
     this.myForm = new FormGroup({
       firstName: new FormControl(null, Validators.required),
@@ -47,7 +46,7 @@ export class CheckoutComponentComponent implements OnInit {
       state: new FormControl(null, Validators.required),
       phone: new FormControl(null, [
         Validators.required,
-        Validators.pattern('[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}')
+        Validators.pattern('[0-9]{10}')
       ]),
       zip: new FormControl(null, [
         Validators.required,
