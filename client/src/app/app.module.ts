@@ -9,6 +9,7 @@ import { ParentComponent } from './parent/parent.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { OrderService } from './services/order.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
   imports: [
     BrowserModule
   ],
-  providers: [ProductService, UserAccountService],
+  providers: [ProductService, UserAccountService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
