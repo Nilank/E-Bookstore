@@ -35,6 +35,7 @@ import { CheckoutComponent } from './checkout-component/checkout.component';
   imports: [
     BrowserModule
   ],
+
   providers: [ProductService, UserAccountService, OrderService, SharedService, AuthService],
   bootstrap: [AppComponent]
 })
