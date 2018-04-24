@@ -11,6 +11,9 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { OrderService } from './services/order.service';
 import { SharedService } from './services/shared.service';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import {AuthService} from "./services/auth.service";
+import { ItemComponentComponent } from './item-component/item-component.component';
 
 
 @NgModule({
@@ -19,12 +22,14 @@ import { SharedService } from './services/shared.service';
     ParentComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    LoginComponentComponent,
+    ItemComponentComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [ProductService, UserAccountService, OrderService,SharedService],
+  providers: [ProductService, UserAccountService, OrderService, SharedService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
