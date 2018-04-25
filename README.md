@@ -9,7 +9,7 @@ Team Members
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 Various web technologies tools such as MongoDB, Express, Node.js is used for this project.
 
-The project uses Angular, TypeScript and SCSS syntax for implementing the Book-Store application.
+The project uses Angular, TypeScript, SCSS, Bootstrap framework and conventional web technologies for implementing the Book-Store application.
 To provide specific funtionality, each section of the application is divided into components.
 As a user, the steps of the implementation is given as follows:
 The user will be able to browse through the directory of books in MongoDB database. Search functionality is also implemented for specific results.
