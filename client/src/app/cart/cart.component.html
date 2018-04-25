@@ -56,9 +56,9 @@
         <strong>Cart Total $ {{cartTotal}}</strong>
       </td>
       <td>
-        <a  [routerLink]="['../checkout']" class="btn btn-success btn-block">CHECKOUT
+        <button  [routerLink]="['../checkout']" class="btn btn-success btn-block" [disabled]="cartTotal<=0" >CHECKOUT
           <i class="fa fa-angle-right"></i>
-        </a>
+        </button>
       </td>
     </tr>
     </tfoot>

@@ -12,27 +12,38 @@ import {OrderService} from '../services/order.service';
 export class CheckoutComponentComponent implements OnInit {
   myForm: FormGroup;
   productList: Array<ListOfProducts>;
+  cartLength: number = 0;
+
+  getListLength(){
+    this.cartLength = this.uas.cart.length;
+  }
+
   onSubmit() {
     this.uas.getCurrentUser();
     this.productList = this.uas.cart;
-    console.log(this.productList);
-    const date = new Date();
-    const order = new Order(
-      this.productList,
-      date,
-      this.uas.userId,
-      this.myForm.value.firstName + ' ' + this.myForm.value.lastName,
-      this.myForm.value.phone,
-      this.myForm.value.city,
-      this.myForm.value.state,
-      this.myForm.value.zip,
-      this.myForm.value.address1,
-      this.myForm.value.address2
-    );
+    if(this.uas.cart.length > 0) {
+      console.log(this.productList);
+      const date = new Date();
+      const order = new Order(
+        this.productList,
+        date,
+        this.uas.userId,
+        this.myForm.value.firstName + ' ' + this.myForm.value.lastName,
+        this.myForm.value.phone,
+        this.myForm.value.city,
+        this.myForm.value.state,
+        this.myForm.value.zip,
+        this.myForm.value.address1,
+        this.myForm.value.address2
+      );
 
-    this.orderService.order = order;
-    this.router.navigateByUrl('/payment');
-    this.myForm.reset();
+      this.orderService.order = order;
+      this.router.navigateByUrl('/payment');
+      this.myForm.reset();
+    }else
+    {
+      alert("your cart is empty, cannot checkout")
+    }
   }
   constructor(private uas: UserAccountService, private router: Router, private orderService: OrderService) {
   }

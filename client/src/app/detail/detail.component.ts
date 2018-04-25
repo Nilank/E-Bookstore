@@ -27,6 +27,7 @@ export class DetailComponent implements OnInit {
               private userAccountService: UserAccountService) {
   }
 
+
   ngOnInit() {
     // this.productID = this.route.snapshot.params["productID"]
     // console.log(this.productID);
