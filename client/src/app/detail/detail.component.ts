@@ -19,7 +19,7 @@ export class DetailComponent implements OnInit {
   selectedStyle: string;
   selectedQty: number;
 
-  style: string[] = ['HardBind', 'SoftCopy', 'kindle', 'xl'];
+  style: string[] = ['HardBind', 'SoftCopy', 'kindle'];
 
   constructor(private route: ActivatedRoute,
               private router: Router,

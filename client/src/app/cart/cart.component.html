@@ -1,11 +1,17 @@
 <script src="cart.component.ts"></script>
+<br>
+<br>
+<div class="container">
+
+    <h4> Hello, {{userAccountService.user.firstName}} {{userAccountService.user.lastName}} your Cart Details are :</h4>
+</div>
 <div class="container-fluid mt-5">
   <table id="cart" class="table table-hover table-condensed ">
     <thead>
     <tr>
-      <th style="width:50%">Product</th>
+      <th style="width:50%">Book Detail</th>
       <th style="width:10%">Price</th>
-      <th style="width:10%">Size</th>
+      <th style="width:10%">Style</th>
       <th style="width:10%">Quantity</th>
       <th style="width:10%">Subtotal</th>
       <th style="width:10%"></th>
@@ -23,16 +29,16 @@
           </div>
         </div>
       </td>
-      <td data-th="Price" class="pro-price">${{products[i]?.itemList.price.s}}</td>
+      <td data-th="Price" class="pro-price">${{products[i]?.itemList.price[item?.style]}}</td>
 
-      <td data-th="Size" class="pro-price">{{item?.size}}</td>
+      <td data-th="Size" class="pro-price">{{item?.style}}</td>
 
       <td data-th="Quantity"class="pro-qty">
         <input type="number" class="form-control " value="{{item?.qty}}" disabled>
       </td>
-      <td data-th="Subtotal" class="pro-subTotal"> ${{item?.qty*products[i]?.itemList.price.s}}</td>
+      <td data-th="Subtotal" class="pro-subTotal"> ${{item?.qty*products[i]?.itemList.price[item?.style]}}</td>
       <td class="actions" data-th="">
-        <button class="btn btn-dark btn-sm btn-delete" (click)="onDelete(item)">
+        <button class="btn btn-danger" (click)="onDelete(item)">
           <i class="fa fa-trash-o"></i>
         </button>
       </td>
@@ -41,15 +47,16 @@
     <tfoot>
     <tr>
       <td>
-        <a [routerLink]="['/home']"  class="btn btn-info">
+        <a [routerLink]="['/home']"  class="btn btn-success">
           <i class="fa fa-angle-left"></i> CONTINUE</a>
       </td>
       <td colspan="2" class="hidden-xs"></td>
       <td class="hidden-xs text-center">
-        <strong>Total ${{total}}</strong>
+        <strong>{{getTotal()}}</strong>
+        <strong>Cart Total $ {{cartTotal}}</strong>
       </td>
       <td>
-        <a  [routerLink]="['../checkout']" class="btn btn-danger btn-block">CHECKOUT
+        <a  [routerLink]="['../checkout']" class="btn btn-success btn-block">CHECKOUT
           <i class="fa fa-angle-right"></i>
         </a>
       </td>

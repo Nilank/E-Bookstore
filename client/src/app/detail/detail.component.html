@@ -1,12 +1,13 @@
 <script src="detail.component.ts"></script>
-<div class="container">
-  <div class="card">
+<div class="container" id="containerDiv">
+  <div >
     <div class="container-fliud">
       <div class="wrapper row">
         <div class="preview col-md-6">
 
           <div class="preview-pic tab-content">
             <div class="tab-pane active" id="pic-1">
+
               <img src="{{this.product?.itemList.color[0].url}}"/></div>
           </div>
         </div>
@@ -14,7 +15,7 @@
           <h3 class="product-title">{{product?.name}}</h3>
 
           <p class="product-description">{{product?.description}}</p>
-          <h4 class="price">current price: $ <span>{{product?.itemList.price[selectedStyle]}}</span></h4>
+          <h6 class="price">Price: $ <span>{{product?.itemList.price[selectedStyle]}}</span></h6>
           <p class="product-style">Style:
             <span>
             <select name="style-type" class="product-style" style="width:60px;" [ngModel]="selectedStyle" (ngModelChange)="changeStyle($event)" required>
@@ -29,7 +30,8 @@
           </span>
           </p>
           <div class="action">
-            <button class="add-to-cart btn btn-danger" type="button" (click)="onAdd()">add to cart</button>
+            <button class="add-to-cart btn btn-primary" type="button" (click)="onAdd()">add to cart</button>
+            <br/><br/><br/>
           </div>
         </div>
       </div>

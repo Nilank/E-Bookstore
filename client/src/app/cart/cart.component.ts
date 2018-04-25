@@ -11,11 +11,28 @@ import {UserAccountService} from '../services/userAccount.service';
 })
 export class CartComponent implements OnInit {
 
-  total: number;
+  cartTotal: number = 0;
   products: Product[] = [];
   constructor(private productService: ProductService,
               private userAccountService: UserAccountService) {
   }
+
+  getTotal(){
+    let i = 0;
+    let myTotal = 0;
+    for(let cartItem of this.userAccountService.cart) {
+      let prod = this.productService.getProduct(cartItem.productId);
+      console.log(prod);
+      console.log('name -> '+ [this.products[i].name]);
+      console.log('style -> '+ [cartItem.style]);
+      console.log('price -> '+ this.products[i].itemList.price[cartItem.style])
+      myTotal = myTotal + ((this.products[i].itemList.price[cartItem.style]) * cartItem.qty)
+      console.log(myTotal);
+      i++;
+    }
+
+    this.cartTotal = myTotal;
+  };
 
   onDelete(cart) {
     this.userAccountService.getCurrentUser();

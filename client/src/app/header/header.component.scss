@@ -2,9 +2,12 @@
   border: none;
   border-bottom: 1px solid lightgray;
 }
+span, #home{
+  color: white;
+}
 
 header {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   nav {
     font-size: 14px;
     width: 100%;

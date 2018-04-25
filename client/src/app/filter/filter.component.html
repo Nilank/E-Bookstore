@@ -1,8 +1,9 @@
 <div class="container-fluid mt-5">
   <div class="collectionfilers" data-chilren=".filters">
     <h3 data-toggle="collapse" data-parent="#collectionfilers" href="#filters" aria-expanded="true">
-      <i class="fa fa-sliders" aria-hidden="true"></i>
-      FILTER</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9u5hctbTMm0LpLXS-5fOcQmCVLv0xkV-Lom4xV6w9Ila-2WMFpA" width="30px" height="30px">
+
+      Sort</h3>
   </div>
   <hr>
   <div>
@@ -10,7 +11,7 @@
       <div class="item col-md-4">
         <a data-toggle="collapse" class="font-weight-bold text-dark" data-parent="#filters" href="#name"
            aria-expanded="false">
-          NAME
+          By Book Name
         </a>
         <hr>
         <div id="name" class="collapse" role="tabpanel">
@@ -25,7 +26,7 @@
       <div class="item col-md-4">
         <a data-toggle="collapse" class="font-weight-bold text-dark" data-parent="#filters" href="#rate"
            aria-controls="rate" aria-expanded="false">
-          RATE
+          By Book Rating
         </a>
         <hr>
         <div id="rate" class="collapse" role="tabpanel">
@@ -36,21 +37,21 @@
           </ol>
         </div>
       </div>
-      <div class="item col-md-4">
-        <a data-toggle="collapse" class="font-weight-bold text-dark" data-parent="#filters" href="#price"
-           aria-expanded="false">
-          PRICE
-        </a>
-        <hr>
-        <div id="price" class="collapse" role="tabpanel">
-          <ol>
-            <li><input type="checkbox" class="price-ascending" [checked]="isCheck('low')" (click)="click($event,'low')"><span
-              class="font-italic">  Low to High</span></li>
-            <li><input type="checkbox" class="price-descending" [checked]="isCheck('high')"
-                       (click)="click($event,'high')"><span class="font-italic">  High to Low</span></li>
-          </ol>
-        </div>
-      </div>
+      <!--<div class="item col-md-4">-->
+      <!--<a data-toggle="collapse" class="font-weight-bold text-dark" data-parent="#filters" href="#price"-->
+      <!--aria-expanded="false">-->
+      <!--PRICE-->
+      <!--</a>-->
+      <!--<hr>-->
+      <!--<div id="price" class="collapse" role="tabpanel">-->
+      <!--<ol>-->
+      <!--<li><input type="checkbox" class="price-ascending" [checked]="isCheck('low')" (click)="click($event,'low')"><span-->
+      <!--class="font-italic">  Low to High</span></li>-->
+      <!--<li><input type="checkbox" class="price-descending" [checked]="isCheck('high')"-->
+      <!--(click)="click($event,'high')"><span class="font-italic">  High to Low</span></li>-->
+      <!--</ol>-->
+      <!--</div>-->
+      <!--</div>-->
     </div>
   </div>
 </div>
