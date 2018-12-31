@@ -20,7 +20,7 @@ The user can confirm the order placed by providing the necessary details such as
 The user can proceed to pay for the books selected by giving its card details and thus completing the orders.
 The user can view the orders on the My Orders tab for review.
 
-## The project satisfies the following features:
+## Use Cases:
 
 As a user, I should be able to login using username/password login.
 
@@ -38,11 +38,15 @@ As a user, I should be able to delete a record.
 
 As a user, I should be able to log out of the application.
 
-## Instructions to run the project
+## Project Installation
 
 Clone the project into a local system or unzip the project files from this repository.
 
 Change the directory to 'client' and 'server' and run 'npm i' on both respectively.
+```
+cd client
+npm i
+```
 
 Go to 'data/db' and run 'mongod' and set up the 'dbpath' where the 'db' is stored.
 
