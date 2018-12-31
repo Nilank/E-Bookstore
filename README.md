@@ -49,12 +49,15 @@ npm i
 ```
 ```
 cd server
-
 npm i
 
 ```
-
 Go to 'data/db' and run 'mongod' and set up the 'dbpath' where the 'db' is stored.
+```
+cd data/db
+mongod
+
+```
 
 Setup the 'mongo' connection to your local MongoDB.
 
