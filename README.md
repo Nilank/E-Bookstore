@@ -47,6 +47,12 @@ Change the directory to 'client' and 'server' and run 'npm i' on both respective
 cd client
 npm i
 ```
+```
+cd server
+
+npm i
+
+```
 
 Go to 'data/db' and run 'mongod' and set up the 'dbpath' where the 'db' is stored.
 
